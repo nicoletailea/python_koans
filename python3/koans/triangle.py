@@ -16,8 +16,9 @@
 # and
 #   about_triangle_project_2.py
 #
-def triangle(a, b, c):
+def triangle(a: object, b: object, c: object) -> object:
     # DELETE 'PASS' AND WRITE THIS CODE
+
     pass
 
 # Error class used in part 2.  No need to change this code.

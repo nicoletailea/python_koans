@@ -18,8 +18,19 @@
 #
 def triangle(a: object, b: object, c: object) -> object:
     # DELETE 'PASS' AND WRITE THIS CODE
+    if min([a, b, c]) <= 0:
+        raise TriangleError
 
-    pass
+    if sorted([a, b, c])[0] + sorted([a, b, c])[1] <= sorted([a, b, c])[2]:
+        raise TriangleError
+
+    set_a = set(([a, b, c]))
+    if len(set_a) == 1:
+        return 'equilateral'
+    elif len(set_a) == 2:
+        return 'isosceles'
+    elif len(set_a) == 3:
+        return 'scalene'
 
 # Error class used in part 2.  No need to change this code.
 class TriangleError(Exception):
